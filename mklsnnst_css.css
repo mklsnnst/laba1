@@ -53,6 +53,38 @@ h1::after {
     font-weight: 700; 
     cursor: pointer; 
 }
+#pic1 {
+    position: relative;
+    left: 600px;
+}
 
+#pic2 {
+    position: absolute;
+    left: 50px;
+    top: 475px;
+    width: 400px;
+    height: 300px;
+}
 
-  
+.text {
+    box-sizing: border-box;
+    min-height: 100px;
+    width: 1400px;
+    margin: 15px;
+    border: 5px solid black;
+}
+.header { 
+    box-sizing: border-box; 
+    display: block; 
+    position: fixed; 
+    top: 0; 
+    padding-top: 10px; 
+    height: 100px; 
+    width:300px; 
+    background-color: rgb(53, 97, 126); 
+    border: #7c848b solid 5px; 
+    border-radius: 5px;  
+    z-index: 1; 
+    font-size: 32px; 
+    padding: 15px; 
+}
