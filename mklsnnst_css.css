@@ -1,90 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px; 
     font-weight: 400; 
     color: var(--text-color); 
     background-color: #f9f9f9; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .zag {
     font-family: 'Times New Roman', Times, serif;
-    color:rgb(153, 89, 153);
+    color: rgb(153, 89, 153);
+    text-align: center;
 }
+
 .syl {
-    color:rgb(38, 21, 53);
+    color: rgb(38, 21, 53);
 }
+
 .lyd {
-    color:rgb(212, 70, 70)
+    color: rgb(212, 70, 70);
 }
+
 h1 {
     font-size: 5vw;
-  }
-  h1 {
     -webkit-text-stroke: 2px black;
     color: white;
-  }
+    text-align: center;
+}
+
 button {
     border: solid;
     background-color: transparent;
-    font-size: 5em;
+    font-size: 2em;
+    cursor: pointer;
 }
-  
 
 button:hover,
 button:focus,
 button:hover ~ button,
 button:focus ~ button {
-color: white;
+    color: white;
 }
 
 h1::after {
     content: "!";
     color: red;
 }
+
 .selector.selector_modificator {
     color: red;
 }
+
 .btn {
     padding: 10px 20px; 
     border: none; 
     border-radius: 5px; 
-    background-color: var(--primary-color); 
+    background-color: rgb(153, 89, 153); 
     color: #f9f9f9; 
     font-weight: 700; 
     cursor: pointer; 
 }
+
 #pic1 {
     position: relative;
-    left: 600px;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
 }
 
 #pic2 {
-    position: absolute;
-    left: 50px;
-    top: 475px;
+    position: relative;
+    left: 0;
+    top: 0;
     width: 400px;
     height: 300px;
+    margin: 20px 0;
 }
 
 .text {
     box-sizing: border-box;
     min-height: 100px;
-    width: 1400px;
-    margin: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 15px 0;
     border: 5px solid black;
+    padding: 15px;
 }
+
 .header { 
     box-sizing: border-box; 
-    display: block; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     position: fixed; 
     top: 0; 
-    padding-top: 10px; 
     height: 100px; 
-    width:300px; 
+    width: 100%; 
     background-color: rgb(53, 97, 126); 
     border: #7c848b solid 5px; 
     border-radius: 5px;  
     z-index: 1; 
     font-size: 32px; 
     padding: 15px; 
+}
+
+.header .logo {
+    color: white;
+    text-decoration: none;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rating button {
+    margin: 0 5px;
+}
+
+ul, ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style-position: inside;
+}
+
+ul li, ol li {
+    margin: 5px 0;
 }
