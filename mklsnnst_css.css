@@ -67,21 +67,17 @@ h1::after {
     cursor: pointer; 
 }
 
-#pic1 {
-    position: relative;
-    left: 0;
-    max-width: 100%;
-    height: auto;
+#pic1, #pic2 {
+    max-width: 100%; /* Максимальная ширина 100% */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    object-fit: cover; /* Масштабирование с сохранением пропорций */
     margin: 20px 0;
 }
 
 #pic2 {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 400px;
-    height: 300px;
-    margin: 20px 0;
+    width: 400px; /* Устанавливаем ширину, если нужно */
+    height: 300px; /* Устанавливаем высоту, если нужно */
+    object-fit: cover; /* Сохраняем пропорции и заполняем контейнер */
 }
 
 .text {
@@ -137,4 +133,14 @@ ul, ol {
 
 ul li, ol li {
     margin: 5px 0;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #555;
 }
