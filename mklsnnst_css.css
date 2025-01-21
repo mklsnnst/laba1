@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Основные стили */
 body {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 16px; 
-    font-weight: 400; 
-    color: var(--text-color); 
-    background-color: #f9f9f9; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,6 +14,13 @@ body {
     align-items: center;
 }
 
+/* Замена стандартного выделения */
+::selection {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Заголовки */
 .zag {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(153, 89, 153);
@@ -34,52 +42,47 @@ h1 {
     text-align: center;
 }
 
+/* Кнопки */
 button {
-    border: solid;
-    background-color: transparent;
-    font-size: 2em;
-    cursor: pointer;
-}
-
-button:hover,
-button:focus,
-button:hover ~ button,
-button:focus ~ button {
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-h1::after {
-    content: "!";
-    color: red;
+button:hover {
+    background-color: #45a049;
 }
 
-.selector.selector_modificator {
-    color: red;
+button:active {
+    background-color: #388E3C;
 }
 
-.btn {
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    background-color: rgb(153, 89, 153); 
-    color: #f9f9f9; 
-    font-weight: 700; 
-    cursor: pointer; 
+button:focus {
+    outline: 2px solid #4CAF50;
 }
 
+/* Изображения */
 #pic1, #pic2 {
-    max-width: 100%; /* Максимальная ширина 100% */
-    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
-    object-fit: cover; /* Масштабирование с сохранением пропорций */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
     margin: 20px 0;
+    flex-basis: 300px;
 }
 
 #pic2 {
-    width: 400px; /* Устанавливаем ширину, если нужно */
-    height: 300px; /* Устанавливаем высоту, если нужно */
-    object-fit: cover; /* Сохраняем пропорции и заполняем контейнер */
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
 }
 
+/* Текстовые блоки */
 .text {
     box-sizing: border-box;
     min-height: 100px;
@@ -90,21 +93,22 @@ h1::after {
     padding: 15px;
 }
 
-.header { 
-    box-sizing: border-box; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: fixed; 
-    top: 0; 
-    height: 100px; 
-    width: 100%; 
-    background-color: rgb(53, 97, 126); 
-    border: #7c848b solid 5px; 
-    border-radius: 5px;  
-    z-index: 1; 
-    font-size: 32px; 
-    padding: 15px; 
+/* Хедер */
+.header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(53, 97, 126);
+    border: #7c848b solid 5px;
+    border-radius: 5px;
+    z-index: 1;
+    font-size: 32px;
+    padding: 15px;
 }
 
 .header .logo {
@@ -112,6 +116,7 @@ h1::after {
     text-decoration: none;
 }
 
+/* Рейтинг */
 .rating {
     display: flex;
     justify-content: center;
@@ -123,6 +128,7 @@ h1::after {
     margin: 0 5px;
 }
 
+/* Списки */
 ul, ol {
     display: flex;
     flex-direction: column;
@@ -135,6 +141,7 @@ ul li, ol li {
     margin: 5px 0;
 }
 
+/* Изображения с подписями */
 figure {
     margin: 0;
     text-align: center;
@@ -145,11 +152,11 @@ figcaption {
     color: #555;
 }
 
-/* Добавляем Grid */
+/* Сетка */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоматические колонки */
-    gap: 20px; /* Расстояние между элементами */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -157,7 +164,7 @@ figcaption {
 }
 
 .text-block {
-    grid-column: span 2; /* Текст занимает две колонки */
+    grid-column: span 2;
 }
 
 .image-block {
@@ -165,31 +172,66 @@ figcaption {
     flex-direction: column;
     align-items: center;
 }
-.ss { 
-    box-sizing: border-box; 
-    border: #0f2d4c solid 5px; 
-    border-radius: 5px; 
-    padding: 1em; 
-    display: flex; 
-    margin: 10px; 
-}
-.ss { 
-    color:black; 
-} 
- 
-.ss:active { 
-    background-color: rgba(146, 79, 221, 0.951); 
-} 
- 
-.ss:hover { 
-    color:rgb(62, 8, 44);
 
+/* Ссылки */
+.ss {
+    box-sizing: border-box;
+    border: #0f2d4c solid 5px;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.ss:active {
+    background-color: rgba(146, 79, 221, 0.951);
+}
+
+.ss:hover {
+    color: rgb(62, 8, 44);
+}
+
+/* Иконки */
 .icon {
     height: 16px;
     width: 16px;
 }
 
+/* Форма */
 #send {
     color: black;
+}
+
+/* Стилизация полей формы */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input:required {
+    border-color: #FF0000;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
